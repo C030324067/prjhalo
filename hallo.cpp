@@ -1,17 +1,29 @@
 #include <iostream>
 using namespace std;
+
 int main() {
-    char nama[5][20];
+    char nama[100][20];
+    int jumlah;
 
-    strcpy(nama[0], "febia"); 
-    strcpy(nama[0], "risma"); 
-    strcpy(nama[0], "nadya"); 
-    strcpy(nama[0], "mutiara"); 
-    strcpy(nama[0], "dita"); 
+    cout << "Masukkan jumlah nama yang ingin diproses (maksimal 100): ";
+    cin >> jumlah;
 
-    cout << "Daftar Nama:\n";
-    for (int i = 0; i < 5; i++){
-        cout << "Nama ke-" << i + 1 << ": " << nama[i] << end1;
+    if (jumlah < 1 || jumlah > 100) {
+        cout << "Jumlah tidak valid!" << endl;
+        return 1;
     }
+
+    cin.ignore(); // penting untuk membersihkan karakter newline
+
+    for (int i = 0; i < jumlah; i++) {
+        cout << "Masukkan nama ke-" << i + 1 << ": ";
+        cin.getline(nama[i], 20);
+    }
+
+    cout << "\nDaftar Nama:\n";
+    for (int i = 0; i < jumlah; i++) {
+        cout << "Nama ke-" << i + 1 << ": " << nama[i] << endl;
+    }
+
     return 0;
 }

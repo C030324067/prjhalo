@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-    cout << "Poliban Juara" <<::endl;
-    cout<<"Halo";
+    char nama[5][20];
     return 0;
 }

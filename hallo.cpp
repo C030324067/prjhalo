@@ -1,6 +1,7 @@
 #include <iostream>
-
+using namespace std;
 int main() {
-    std::cout << "Poliban Juara" << std::endl;
+    cout << "Poliban Juara" <<::endl;
+    cout<<"Halo";
     return 0;
 }
